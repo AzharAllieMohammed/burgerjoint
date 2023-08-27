@@ -1,47 +1,90 @@
 <!doctype html>
 <html lang = "en">
-//Timothy and Tamryn
 <head>
-    <title>Menu item</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Papa Joe's</title>
+    <link rel="stylesheet" href="menu.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap" rel="stylesheet">
 </head>
 <body>
-<h1>Menu item</h1>
-<form id="menuForm" action="review.html">
+<!--  Start of Navigation Bar  -->
+<div class="navigationBar">
+    <div class="navAbout">About Us</div>
+    <div class="navMenu">Menu</div>
+    <div class="navReservation">Reservation</div>
+    <div class="navLogo">Papa Joe's</div>
+    <div class="navNews">News & Events</div>
+    <div class="navGallery">Gallery</div>
+    <div class="navContact">Contact</div>
+</div>
+<!--  End of Navigation Bar  -->
 
-    <img src="images/beef_burger.jpg" alt="Delicious Beef Burger" width="300" height="200">
+<!-- Start of Menu Item -->
+<div class="selectedMenuItem">
+    <div class="menuImg"></div>
+    <div class="menuLayout">
+        <h1>Menu item</h1>
+        <p>Item name: Delicious Chicken Burger</p>
+        <p>
+        Description: Crafted from the finest ground beef, nestled in a toasted bun and
+        topped with fresh lettuce, ripe tomato, melted cheese, and a touch of tangy sauce.
+        </p>
+        <p>Price: R59.99</p>
+        <div id="messageContainer">Added to order!</div><br>
+    </div>
+    <div class="buttons">
+        <button id="orderButton" class="styled-button" onclick="order()" type="button">Add to order</button><br><br>
 
 
-    <p>Item name: Delicious Beef Burger</p>
+        <a href="review.html"><button id="nextBtn" type="button" style="visibility: hidden">Next</button></a>
+    </div>
+</div>
 
-    </p>
-    Description: Savor the mouthwatering essence of our Delicious Beef Burger.
-    Crafted from the finest ground beef, expertly seared to perfection, and nestled in a toasted bun.
-    Topped with fresh lettuce, ripe tomato, melted cheese, and a touch of tangy sauce, every bite is a symphony of flavors and satisfaction.
-    </p>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
-
-    <p>Price: R59.99</p>
-
-    <input type="hidden" name="item_name" value="Delicious Beef Burger">
-    <input type="hidden" name="item_price" value="R59.99">
-
-    <button id="myButton" class="styled-button" type="button">Add to order</button><br><br>
-    <div id="messageContainer"></div><br>
-
-    <input type="submit" name="submit" value="Next" />
-</form>
-
-
+<!--  FOOTER  -->
+<footer>
+    <p>Copyright | All rights reserved | Papa Joe's</p>
+</footer>
 <script>
-    document.getElementById("myButton").addEventListener("click", function() {
-        var messageContainer = document.getElementById("messageContainer");
-        messageContainer.textContent = "Menu item added to your order.";
-    });
+    let addToOrder = document.getElementById("orderButton");
+    let next = document.getElementById("nextBtn");
+    let message = document.getElementById("messageContainer");
 
-    document.getElementById("menuForm").addEventListener("submit", function() {
-        document.getElementsByName("item_name")[0].value = "Delicious Beef Burger";
-        document.getElementsByName("item_price")[0].value = "R59.99";
-    });
+    function order() {
+        addToOrder.style.background = "red";
+        addToOrder.style.visibility = "hidden";
+        next.style.visibility = "visible";
+        message.style.visibility = "visible";
+    }
+
+
+
 </script>
+<!--<script>-->
+<!--    document.getElementById("myButton").addEventListener("click", function() {-->
+<!--        var messageContainer = document.getElementById("messageContainer");-->
+<!--        messageContainer.textContent = "Menu item added to your order.";-->
+<!--    });-->
+
+<!--    document.getElementById("menuForm").addEventListener("submit", function() {-->
+<!--        document.getElementsByName("item_name")[0].value = "Delicious Beef Burger";-->
+<!--        document.getElementsByName("item_price")[0].value = "R59.99";-->
+<!--    });-->
+<!--</script>-->
 </body>
 </html>

@@ -1,0 +1,232 @@
+/* Correct default styles*/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Space Grotesk', sans-serif;
+    color: white;
+    background-color: black;
+}
+
+/* Start of Navigation Bar*/
+.navigationBar {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 4fr 1fr 1fr 1fr;
+    grid-template-rows: 100px;
+    grid-template-areas:
+    "navAbout navMenu navReservation navLogo navNews navGallery navContact";
+    justify-items: center;
+    align-items: center;
+    padding: 0 4rem;
+    background: black;
+}
+.navAbout {
+    grid-area: navAbout;
+    //background: red;
+}
+.navMenu {
+    grid-area: navMenu;
+    //background: blue;
+}
+.navReservation {
+    grid-area: navReservation;
+    //background: purple;
+}
+.navLogo {
+    grid-area: navLogo;
+    //background: yellow;
+    font-size: 2.5rem;
+    text-decoration: underline;
+}
+.navNews {
+    grid-area: navNews;
+    //background: green;
+}
+.navGallery {
+    grid-area: navGallery;
+    //background: orange;
+}
+.navContact {
+    grid-area: navContact;
+    //background: red;
+}
+
+/* End of Navigation Bar*/
+
+/* Start of Welcome Section */
+.welcomeSection {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1000px 700px 1000px;
+    grid-template-areas:
+    "mainImage mainImage"
+    "secondaryImg2 secondaryImg3"
+    "secondaryImg4 secondaryImg4";
+}
+.mainImage {
+    grid-area: mainImage;
+    background-image: url("./assets/burger2.jpg");
+    height: 90%;
+    background-attachment: fixed;
+    background-position: top;
+    background-repeat: repeat;
+    background-size: cover;
+    position: relative;
+}
+/* Image Text */
+.mainImageText {
+    text-align: center;
+    position: absolute;
+    top: 20%;
+    left: 2%;
+    background-color: rgba(0, 0, 0, 0.56);
+    padding: 10rem 5rem;
+    transition: 2s;
+    border-radius: 0 0 0 0;
+    animation: maintextanim 5s cubic-bezier(.39,1.09,.62,-0.32) infinite;
+}
+.mainImageText a {
+    background-color: rgba(31,29,29,0);
+}
+@keyframes maintextanim {
+    0% {
+        border-radius: 0 0 0 0;
+        border: white 2px solid;
+    }
+    50%{
+        border-radius: 10px 10px 5px 0;
+        border: #72f5f0 2px solid;
+    }
+    100% {
+        border-radius: 20px 20px 20px 20px;
+        border: white 2px solid;
+    }
+}
+.mainImageText:hover {
+    border: 2px solid rgb(46, 151, 196);
+    transition: 2s;
+    animation-timing-function: ease-in-out;
+}
+.mainImageText h1 {
+    padding: 2rem;
+    background-color: rgba(31,29,29,0);
+    text-decoration: underline;
+}
+.mainImageText h3 {
+    padding: 1rem;
+    background-color: rgba(31,29,29,0);
+}
+.mainImageText button {
+    padding: 1rem 5rem;
+    background-color: rgba(0, 0, 0, 0);
+    transition: 0.5s;
+    border-left: 0;
+    border-right:0;
+    font-size: 20px;
+}
+.mainImageText button:hover {
+    padding: 1rem 5rem;
+    background-color: rgb(229, 62, 62);
+    transition: 0.2s;
+    border-left: 20px solid #1fb9f6;
+    border-right: 20px solid #1fb9f6;
+    border-top: 0;
+    border-bottom:0;
+    font-size: 25px;
+}
+
+.secondaryImg2 {
+    grid-area: secondaryImg2;
+    background-image: url("./assets/restaurant2.jpg");
+    height: 70%;
+    background-attachment: fixed;
+    background-position: bottom;
+    background-repeat: repeat;
+    background-size: cover;
+    position: relative;
+    margin: 1rem;
+}
+.secondaryImg2 p {
+    text-align: center;
+    padding: 2rem;
+}
+.secondaryImg3 {
+    grid-area: secondaryImg3;
+    background-image: url("./assets/restaurant3.jpg");
+    height: 70%;
+    width: 100%;
+    background-attachment: fixed;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    margin: 1rem;
+}
+.secondaryImg3 p {
+    text-align: center;
+    padding: 2rem;
+}
+.secondaryImg4 {
+    grid-area: secondaryImg4;
+    background-image: url("./assets/burgers.jpg");
+    height: 100%;
+    width: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.ourStory {
+    padding: 2rem 5rem;
+    background-color: black;
+    position: absolute;
+    top:-14% ;
+    left: 39%;
+    font-size: 24px
+}
+.story .chapter1 {
+    padding: 2rem 5rem;
+    width: 400px;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top:20% ;
+    left: 35%;
+    font-size: 1.4rem;
+}
+.story .chapter1 p{
+    background-color: rgba(0, 0, 0, 0);
+
+}
+.story .readMore button {
+    padding: 2rem 6rem;
+    width: 563px;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top:70% ;
+    left: 35%;
+    font-size: 1.4rem;
+    border-left: 0;
+    border-right: 0;
+    transition: 0.5s;
+}
+
+.story .readMore button:hover {
+    padding: 1rem 5rem;
+    background-color: rgb(229, 62, 62);
+    transition: 0.2s;
+    border-left: 50px solid #1fb9f6;
+    border-right: 50px solid #1fb9f6;
+    border-top: 0;
+    border-bottom:0;
+    font-size: 25px;
+}
+/* FOOTER */
+footer {
+    position: relative;
+    top: 10%;
+    left: 65%;
+    height: 3rem;
+    padding: 3rem;
+    letter-spacing: 0.2rem;
+
+}

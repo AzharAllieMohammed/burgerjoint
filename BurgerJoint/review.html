@@ -1,49 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Payment Form</title>
-    <style>
-        /* Add your CSS styling here */
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Papa Joe's</title>
+    <link rel="stylesheet" href="review.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk&display=swap" rel="stylesheet">
 </head>
 <body>
+<!--  Start of Navigation Bar  -->
+<div class="navigationBar">
+    <div class="navAbout">About Us</div>
+    <div class="navMenu">Menu</div>
+    <div class="navReservation">Reservation</div>
+    <div class="navLogo">Papa Joe's</div>
+    <div class="navNews">News & Events</div>
+    <div class="navGallery">Gallery</div>
+    <div class="navContact">Contact</div>
+</div>
+<!--  End of Navigation Bar  -->
+<br><br><br><br>
+<br><br><br><br>
+<div class="allItemInfoContainer">
+    <div class="allItemInfo">
 
 <div id="itemDetails">
-    <p>Item Name: <span id="itemName"></span></p>
-    <p>Item Price: <span id="itemPrice"></span></p>
+    <h1>Your Order:</h1>
+    <p>Item Name: Delicious Chicken Burger</p>
+    <p>Item Price: R59.99</p>
 </div>
-
-<header>
-    <h1>Payment</h1>
-</header>
-
-<main>
 
 
     <form id="paymentForm">
-        <label for="name">Enter Name:</label><br>
         <input class="box" type="text" name="name" id="name" placeholder="Enter Name" required><br>
-
-        <label for="surname">Enter Surname:</label><br>
         <input class="box" type="text" name="surname" id="surname" placeholder="Enter Surname" required><br>
-
-        <label for="email">Enter Email:</label><br>
-        <input class="box" type="email" name="email" id="email" placeholder="Enter Email" required><br>
-
-        <label for="cardNumber">Card Number:</label><br>
         <input class="box" type="tel" name="cardNumber" id="cardNumber" placeholder="Enter card number"
                maxlength="16" minlength="16" pattern="[0-9]{16}" required><br>
-
-        <label for="pin">Pin:</label><br>
         <input class="box" type="tel" name="pin" id="pin" placeholder="Enter Pin"
                maxlength="5" minlength="4" pattern="[0-9]{4,5}" required><br>
 
         <!-- Other input fields... -->
+        <div class="buttons">
+            <a href="thanks.html"><button class="payBtn" type="button" onclick="checkAndRedirect()">Pay now</button></a>
+            <button class="cancelBtn" onclick="location.href='menu.html'">Cancel</button>
+        </div>
 
-        <button class="btn" type="submit" onclick="checkAndRedirect()">Pay now</button>
-        <button class="btn" onclick="location.href='menu.html'">Cancel</button>
     </form>
-</main>
+</div>
+</div>
+<br><br><br><br>
+<br><br><br><br>
+<!--  FOOTER  -->
+<footer>
+    <p>Copyright | All rights reserved | Papa Joe's</p>
+</footer>
 
 <script>
     // Retrieve item details from URL parameters

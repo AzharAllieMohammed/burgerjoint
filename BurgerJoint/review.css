@@ -1,0 +1,145 @@
+/* Correct default styles*/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Space Grotesk', sans-serif;
+    color: white;
+    background-color: black;
+}
+
+/* Start of Navigation Bar*/
+.navigationBar {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 4fr 1fr 1fr 1fr;
+    grid-template-rows: 100px;
+    grid-template-areas:
+    "navAbout navMenu navReservation navLogo navNews navGallery navContact";
+    justify-items: center;
+    align-items: center;
+    padding: 0 4rem;
+    background: black;
+}
+.navAbout {
+    grid-area: navAbout;
+//background: red;
+}
+.navMenu {
+    grid-area: navMenu;
+//background: blue;
+}
+.navReservation {
+    grid-area: navReservation;
+//background: purple;
+}
+.navLogo {
+    grid-area: navLogo;
+//background: yellow;
+    font-size: 2.5rem;
+    text-decoration: underline;
+}
+.navNews {
+    grid-area: navNews;
+//background: green;
+}
+.navGallery {
+    grid-area: navGallery;
+//background: orange;
+}
+.navContact {
+    grid-area: navContact;
+//background: red;
+}
+
+/* End of Navigation Bar*/
+
+/* Start of Item Information */
+.allItemInfoContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 500px;
+    grid-template-areas: "allItemInfo";
+    justify-items: center;
+    align-items: center;
+}
+.allItemInfo {
+    grid-area: allItemInfo;
+}
+/* FORM */
+#paymentForm {
+
+}
+#paymentForm input{
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    border-bottom: 3px solid red;
+    padding: 1.5rem 3rem;
+    margin: .5rem;
+}
+#paymentForm input:active,input:focus{
+    border-bottom:2px solid darkslateblue;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+}
+
+/* BUTTONS*/
+.payBtn {
+    padding: 1rem 3rem;
+    width: 163px;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top:70% ;
+    left: 40%;
+    font-size: 1.4rem;
+    border-left: 0;
+    border-right: 0;
+    border-top: 2px solid darkslateblue;
+    border-bottom:2px solid darkslateblue;
+    transition: 0.5s;
+    font-size: 13px;
+}
+.payBtn:hover {
+    padding: 1rem 3rem;
+    background-color: rgb(229, 62, 62);
+    transition: 0.2s;
+    border-left: 5px solid #1fb9f6;
+    border-right: 5px solid #1fb9f6;
+    border-top: 0;
+    border-bottom:0;
+}
+.cancelBtn {
+    padding: 1rem 3rem;
+    width: 163px;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    top:70% ;
+    left: 50%;
+    font-size: 1.4rem;
+    border-left: 0;
+    border-right: 0;
+    border-top: 2px solid darkslateblue;
+    border-bottom:2px solid darkslateblue;
+    transition: 0.5s;
+    font-size: 13px;
+}
+.cancelBtn:hover {
+    padding: 1rem 3rem;
+    background-color: rgb(229, 62, 62);
+    transition: 0.2s;
+    border-left: 5px solid #1fb9f6;
+    border-right: 5px solid #1fb9f6;
+    border-top: 0;
+    border-bottom:0;
+}
+
+/* FOOTER */
+footer {
+    position: relative;
+    top: 10%;
+    left: 35%;
+    height: 3rem;
+    padding: 3rem;
+    letter-spacing: 0.2rem;
+
+}
